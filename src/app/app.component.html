@@ -1,0 +1,100 @@
+<header class="container-fluid navbar-fixed-top">
+    <div class="container ">
+        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12 header-col text-left">
+            <h3><strong>Circus Scroll 2</strong> <br class="visible-sm"/>- Angular 2 Directive for scroll animations</h3>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 header-col text-right ">            
+            <a href="#" class="btn btn-primary">Frok me on GitHub <span class="glyphicon glyphicon-chevron-right"></span></a>                      
+        </div>
+    </div>    
+</header>
+
+<div class="screen welcomePage text-center">
+    <div class="screen-content">
+        <h1 circus-scorll
+            [csTweenBegin]="'0ovh'"
+            [csTweenEnd]="'50ovh'"
+            [csTweenFrom]="{letterSpacing : '0vw', fontSize : '6vw',marginTop : '5vh'}"
+            [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '7vw', marginTop: '70vh'}"
+            [csTweenEasing]="'easeInOutQuad'"
+            [csTweenOnBegin]="anim1OnBegin"
+            [csTweenOnEnd]="anim1OnEnd"
+            [csTweenOnReverseBegin]="anim1OnReverseBegin"
+            [csTweenOnReverseEnd]="anim1OnReverseEnd"
+            [csTweenOnProgress]="anim1OnProgress"
+        >
+            {{title}}
+        </h1>
+       
+            <div class="arrow">
+                <span class="dot" circus-scorll [csTweenBegin]="'10ovh'">.</span>                
+                <span class="dot" circus-scorll [csTweenBegin]="'15ovh'">.</span>                
+                <span class="dot" circus-scorll [csTweenBegin]="'20ovh'">.</span>               
+                <span class="dot" circus-scorll [csTweenBegin]="'25ovh'">.</span>                
+                <span class="dot" circus-scorll [csTweenBegin]="'30ovh'">.</span>                                      
+                <span class="glyphicon glyphicon-menu-down arrowhead" 
+                    circus-scorll
+                    [csTweenBegin]="'35ovh'"
+                    [csTweenEnd]="'45ovh'"               
+                ></span>
+            </div>            
+    </div>
+</div>
+<div class="container-fluid tutorial">   
+    <div class="container">
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <h2 class="section-header">How to use</h2>
+        </div>        
+        <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
+           <h4>Import CircusScrollDirective</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
+           <label class="label label-info">app.module.ts:</label>
+           <codemirror [(ngModel)]="codeAppModule" [config]="cmConfigTypeScript"></codemirror>
+        </div>        
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <h4 class="section-header">Example 1:</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">       
+            <label class="label label-info">HTML:</label>
+            <codemirror [(ngModel)]="codeHTML01" [config]="cmConfigHTML"></codemirror>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <div class="alert alert-info">
+                <strong>ovh</strong> - viewport offset counted in vh.
+            </div>
+        </div>    
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">    
+            <label class="label label-info">CSS:</label>
+            <codemirror [(ngModel)]="codeSCSS01" [config]="cmConfigSCSS"></codemirror>
+        </div>           
+       
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <h4 class="section-header">Example 2:</h4>
+        </div>         
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <label class="label label-info">HTML:</label> 
+            <codemirror [(ngModel)]="codeHTML02" [config]="cmConfigHTML"></codemirror>
+        </div>          
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <h4>Callback functions:</h4>
+        </div>         
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">      
+            <label class="label label-info">app.component.ts</label>     
+            <codemirror [(ngModel)]="codeAppComponent" [config]="cmConfigTypeScript"></codemirror>
+        </div>
+    </div>  
+</div>
+
+<footer>
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h5>Author:</h5>
+            <h5>Zbigi Man Zbigniew Stępniewski, &copy; 12.2016, MIT Licence</h5>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+            <h5><a target="_blank" href="//zbigiman.com">zbigiman.com</a></h5>
+            <h5><a target="_blank" href="//github.com/zbigiman">github.com/zbigiman</a></h5>   
+        </div>    
+    </div>
+</footer>

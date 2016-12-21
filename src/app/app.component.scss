@@ -1,0 +1,56 @@
+.welcomePage {    
+    overflow: hidden;
+    h1 {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 5vw;
+        margin-top: 5vh;
+        transition: opacity 1s ease;
+        &.csTweenOnEnd {
+            opacity: 0;
+        }
+    }
+    .arrow {
+        span {
+            display: block;
+        }
+        .dot {
+            opacity: 1;
+            transition: all 0.5s ease;
+            &.csTweenOnBegin {
+                opacity: 0;
+            }
+        }
+        .arrowhead {
+            transition: all 0.5s ease;
+            &.csTweenOnBegin {
+                transform: scale(2);
+            }
+            &.csTweenOnEnd {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
+.tutorial {
+    padding: 100px 0;
+    .block {
+        margin: 20px 0;
+        transition: all 1s ease;
+        opacity: 0;
+        transform: translateX(-25vw);
+        .section-header {
+            margin-top: 100px;
+        }
+        &.csTweenOnBegin {
+            transform: translateX(0vw);
+            opacity: 1;
+        }
+        &.csTweenOnEnd {
+            .CodeMirror {
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
