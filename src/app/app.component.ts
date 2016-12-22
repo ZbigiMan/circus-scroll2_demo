@@ -101,10 +101,10 @@ export class AppComponent {
 }`;
 
   codeHTML02 = `<h1 circus-scorll
-    [csTweenBegin]="'0vh'"
-    [csTweenEnd]="'70vh'"
-    [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vw',marginTop : '5vh'}"
-    [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '6vw', marginTop: '100vh'}"
+    [csTweenBegin]="'0ovh'"
+    [csTweenEnd]="'30ovh'"
+    [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
+    [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '8vh'}"
     [csTweenEasing]="'easeInOutQuad'"
     [csTweenOnBegin]="anim1OnBegin"
     [csTweenOnEnd]="anim1OnEnd"
@@ -112,7 +112,7 @@ export class AppComponent {
     [csTweenOnReverseEnd]="anim1OnReverseEnd"
     [csTweenOnProgress]="anim1OnProgress"
 >
-    {{title}}
+    Circus
 </h1>`;
 
   codeAppComponent = `export class AppComponent {

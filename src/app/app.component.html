@@ -9,39 +9,56 @@
     </div>    
 </header>
 
-<div class="screen welcomePage text-center">
-    <div class="screen-content">
-        <h1 circus-scorll
-            [csTweenBegin]="'0ovh'"
-            [csTweenEnd]="'50ovh'"
-            [csTweenFrom]="{letterSpacing : '0vw', fontSize : '6vw',marginTop : '5vh'}"
-            [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '7vw', marginTop: '70vh'}"
-            [csTweenEasing]="'easeInOutQuad'"
-            [csTweenOnBegin]="anim1OnBegin"
-            [csTweenOnEnd]="anim1OnEnd"
-            [csTweenOnReverseBegin]="anim1OnReverseBegin"
-            [csTweenOnReverseEnd]="anim1OnReverseEnd"
-            [csTweenOnProgress]="anim1OnProgress"
-        >
-            {{title}}
-        </h1>
-       
-            <div class="arrow">
-                <span class="dot" circus-scorll [csTweenBegin]="'10ovh'">.</span>                
-                <span class="dot" circus-scorll [csTweenBegin]="'15ovh'">.</span>                
-                <span class="dot" circus-scorll [csTweenBegin]="'20ovh'">.</span>               
-                <span class="dot" circus-scorll [csTweenBegin]="'25ovh'">.</span>                
-                <span class="dot" circus-scorll [csTweenBegin]="'30ovh'">.</span>                                      
-                <span class="glyphicon glyphicon-menu-down arrowhead" 
-                    circus-scorll
-                    [csTweenBegin]="'35ovh'"
-                    [csTweenEnd]="'45ovh'"               
-                ></span>
-            </div>            
+<div class="welcomePage text-center">    
+    <h1 circus-scorll
+        [csTweenBegin]="'0ovh'"
+        [csTweenEnd]="'30ovh'"
+        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
+        [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '8vh'}"
+        [csTweenEasing]="'easeInOutQuad'"
+        [csTweenOnBegin]="anim1OnBegin"
+        [csTweenOnEnd]="anim1OnEnd"
+        [csTweenOnReverseBegin]="anim1OnReverseBegin"
+        [csTweenOnReverseEnd]="anim1OnReverseEnd"
+        [csTweenOnProgress]="anim1OnProgress"
+    >
+        Circus
+    </h1>
+
+    <h1 circus-scorll
+        [csTweenBegin]="'10ovh'"
+        [csTweenEnd]="'30ovh'"
+        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
+        [csTweenTo]="{letterSpacing : '2vw', fontSize : '8vh'}"
+        [csTweenEasing]="'easeInOutQuad'"           
+    >
+        Scroll
+    </h1>
+
+    <h1 circus-scorll
+        [csTweenBegin]="'0ovh'"
+        [csTweenEnd]="'30ovh'"
+        [csTweenFrom]="{fontSize : '5vh'}"
+        [csTweenTo]="{fontSize : '10vh'}"           
+    >
+        2
+    </h1>
+    
+    <div class="arrow">                    
+        <span class="dot" circus-scorll [csTweenBegin]="'20ovh'">.</span>                
+        <span class="dot" circus-scorll [csTweenBegin]="'25ovh'">.</span>                 
+        <span class="dot" circus-scorll [csTweenBegin]="'30ovh'">.</span>                                    
+        <span class="glyphicon glyphicon-menu-down arrowhead" 
+            circus-scorll
+            [csTweenBegin]="'35ovh'"
+            [csTweenEnd]="'45ovh'"               
+        ></span>   
     </div>
 </div>
+
 <div class="container-fluid tutorial">   
     <div class="container">
+                
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
             <h2 class="section-header">How to use</h2>
         </div>        

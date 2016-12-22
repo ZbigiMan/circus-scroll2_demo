@@ -1,9 +1,16 @@
-.welcomePage {    
+.welcomePage {
     overflow: hidden;
+    margin-top: 40vh; 
+    @media (max-width:786px){
+        margin-top: 50vh
+    }   
+    
     h1 {
         font-family: 'Fredericka the Great', cursive;
-        font-size: 5vw;
-        margin-top: 5vh;
+        font-size: 5vh;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
         transition: opacity 1s ease;
         &.csTweenOnEnd {
             opacity: 0;
@@ -12,6 +19,7 @@
     .arrow {
         span {
             display: block;
+            height: 2vh;
         }
         .dot {
             opacity: 1;
@@ -34,7 +42,7 @@
 }
 
 .tutorial {
-    padding: 100px 0;
+    padding-bottom: 100px;
     .block {
         margin: 20px 0;
         transition: all 1s ease;
