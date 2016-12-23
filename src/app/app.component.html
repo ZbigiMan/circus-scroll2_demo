@@ -13,8 +13,8 @@
     <h1 circus-scorll
         [csTweenBegin]="'0ovh'"
         [csTweenEnd]="'30ovh'"
-        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
-        [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '8vh'}"
+        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
+        [csTweenTo]="{letterSpacing : '5vw', fontSize : '0vh'}"
         [csTweenEasing]="'easeInOutQuad'"
         [csTweenOnBegin]="anim1OnBegin"
         [csTweenOnEnd]="anim1OnEnd"
@@ -26,32 +26,30 @@
     </h1>
 
     <h1 circus-scorll
-        [csTweenBegin]="'10ovh'"
+        [csTweenBegin]="'5ovh'"
         [csTweenEnd]="'30ovh'"
-        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
-        [csTweenTo]="{letterSpacing : '2vw', fontSize : '8vh'}"
+        [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
+        [csTweenTo]="{letterSpacing : '10vw', fontSize : '0vh'}"
         [csTweenEasing]="'easeInOutQuad'"           
     >
         Scroll
     </h1>
 
-    <h1 circus-scorll
-        [csTweenBegin]="'0ovh'"
-        [csTweenEnd]="'30ovh'"
-        [csTweenFrom]="{fontSize : '5vh'}"
-        [csTweenTo]="{fontSize : '10vh'}"           
+    <h1 class="two" circus-scorll
+        [csTweenBegin]="'10ovh'"
+        [csTweenEnd]="'20ovh'"               
     >
         2
     </h1>
     
     <div class="arrow">                    
-        <span class="dot" circus-scorll [csTweenBegin]="'20ovh'">.</span>                
-        <span class="dot" circus-scorll [csTweenBegin]="'25ovh'">.</span>                 
-        <span class="dot" circus-scorll [csTweenBegin]="'30ovh'">.</span>                                    
+        <span class="dot" circus-scorll [csTweenBegin]="'5ovh'">.</span>                
+        <span class="dot" circus-scorll [csTweenBegin]="'10ovh'">.</span>                 
+        <span class="dot" circus-scorll [csTweenBegin]="'15ovh'">.</span>                                    
         <span class="glyphicon glyphicon-menu-down arrowhead" 
             circus-scorll
-            [csTweenBegin]="'35ovh'"
-            [csTweenEnd]="'45ovh'"               
+            [csTweenBegin]="'20ovh'"
+            [csTweenEnd]="'25ovh'"               
         ></span>   
     </div>
 </div>

@@ -1,25 +1,37 @@
 .welcomePage {
     overflow: hidden;
-    margin-top: 40vh; 
+    padding-top: 35vh; 
+    padding-bottom: 20vh;
     @media (max-width:786px){
-        margin-top: 50vh
+        padding-top: 45vh;
+        padding-bottom: 10vh;
     }   
     
     h1 {
         font-family: 'Fredericka the Great', cursive;
-        font-size: 5vh;
+        font-size: 10vh;
         margin: 0;
         padding: 0;
         white-space: nowrap;
-        transition: opacity 1s ease;
+        transition: all 0.5s ease;
         &.csTweenOnEnd {
             opacity: 0;
+        }        
+        &.two{            
+            &.csTweenOnBegin {               
+                transform: rotate(360deg) scale(2);
+            }
+            &.csTweenOnEnd {
+                transition: all 1s ease;
+                transform: rotate(720deg) scale(0);
+                opacity: 0;
+            }
         }
     }
     .arrow {
         span {
             display: block;
-            height: 2.5vh;
+            height: 2vh;
         }
         .dot {
             opacity: 1;
