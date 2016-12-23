@@ -119,5 +119,6 @@ export class AppComponent {
 ```
 
 #### More documentation and examples soon.
+### See demo: [www.zbigiman.com/circus-scroll2](http://www.zbigiman.com/circus-scroll2 "Circus Scroll 2")
 
 
