@@ -54,10 +54,10 @@ HTML:
 CSS:
 
 ```CSS
-two.csTweenOnBegin {               
+.two.csTweenOnBegin {               
     transform: rotate(360deg) scale(2);
 }
-two.csTweenOnEnd {
+.two.csTweenOnEnd {
     transition: all 1s ease;
     transform: rotate(720deg) scale(0);
     opacity: 0;

@@ -1,11 +1,19 @@
 .welcomePage {
     overflow: hidden;
-    padding-top: 35vh; 
-    padding-bottom: 20vh;
-    @media (max-width:786px){
-        padding-top: 45vh;
-        padding-bottom: 10vh;
-    }   
+    margin-top: 35vh; 
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    bottom:0;   
+   
+    @media (max-width:425px){
+        margin-top: 40vh;
+       
+    } 
+
+    @media (max-height: 700px){
+        margin-top: 45vh;
+    }  
     
     h1 {
         font-family: 'Fredericka the Great', cursive;
@@ -18,11 +26,12 @@
             opacity: 0;
         }        
         &.two{            
-            &.csTweenOnBegin {               
+            &.csTweenOnBegin {   
+                transition: all 0.7s ease;            
                 transform: rotate(360deg) scale(2);
             }
             &.csTweenOnEnd {
-                transition: all 1s ease;
+                transition: all 1.5s ease;
                 transform: rotate(720deg) scale(0);
                 opacity: 0;
             }
@@ -54,6 +63,7 @@
 }
 
 .tutorial {
+    margin-top: 100vh;
     padding-bottom: 100px;
     .block {
         margin: 20px 0;

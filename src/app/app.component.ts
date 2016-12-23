@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/css/css';
+import 'codemirror/mode/shell/shell';
 
 @Component({
   selector: 'app-root',
@@ -65,9 +66,24 @@ export class AppComponent {
     }
   };
 
+  cmConfigShell = {
+    lineNumbers: true,
+    mode: {
+      name: 'shell'
+    }
+  };
+
   //
 
   // Code examples
+
+  codeShellGit = `git clone https://github.com/ZbigiMan/circus-scroll2
+
+cd circus-scroll2
+
+npm install
+
+ng serve`;
 
   codeAppModule = `import { CircusScrollDirective } from './shared/circus-scroll.directive';
 
@@ -91,10 +107,10 @@ export class AppComponent {
 </h1>`;
 
   codeSCSS01 = `
-two.csTweenOnBegin {               
+.two.csTweenOnBegin {               
     transform: rotate(360deg) scale(2);
 }
-two.csTweenOnEnd {
+.two.csTweenOnEnd {
     transition: all 1s ease;
     transform: rotate(720deg) scale(0);
     opacity: 0;

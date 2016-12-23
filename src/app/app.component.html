@@ -12,9 +12,9 @@
 <div class="welcomePage text-center">    
     <h1 circus-scorll
         [csTweenBegin]="'0ovh'"
-        [csTweenEnd]="'30ovh'"
+        [csTweenEnd]="'40ovh'"
         [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
-        [csTweenTo]="{letterSpacing : '5vw', fontSize : '0vh'}"
+        [csTweenTo]="{letterSpacing : '5vw', fontSize : '2vh'}"
         [csTweenEasing]="'easeInOutQuad'"
         [csTweenOnBegin]="anim1OnBegin"
         [csTweenOnEnd]="anim1OnEnd"
@@ -27,17 +27,17 @@
 
     <h1 circus-scorll
         [csTweenBegin]="'5ovh'"
-        [csTweenEnd]="'30ovh'"
+        [csTweenEnd]="'45ovh'"
         [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
-        [csTweenTo]="{letterSpacing : '10vw', fontSize : '0vh'}"
+        [csTweenTo]="{letterSpacing : '10vw', fontSize : '2vh'}"
         [csTweenEasing]="'easeInOutQuad'"           
     >
         Scroll
     </h1>
 
     <h1 class="two" circus-scorll
-        [csTweenBegin]="'10ovh'"
-        [csTweenEnd]="'20ovh'"               
+        [csTweenBegin]="'20ovh'"
+        [csTweenEnd]="'40ovh'"               
     >
         2
     </h1>
@@ -56,7 +56,17 @@
 
 <div class="container-fluid tutorial">   
     <div class="container">
-                
+
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
+            <h2 class="section-header">Installation</h2>
+        </div>
+        <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
+           <h4>Using Git</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
+           <label class="label label-info">bash:</label>
+           <codemirror [(ngModel)]="codeShellGit" [config]="cmConfigShell"></codemirror>
+        </div>                
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
             <h2 class="section-header">How to use</h2>
         </div>        
