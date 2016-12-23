@@ -83,28 +83,28 @@ export class AppComponent {
   //.. 
 })`;
 
-  codeHTML01 = `<span class="glyphicon glyphicon-menu-down arrowhead" 
-    circus-scorll
-    [csTweenBegin]="'35ovh'"
-    [csTweenEnd]="'45ovh'"               
-></span>`;
+  codeHTML01 = `<h1 class="two" circus-scorll
+    [csTweenBegin]="'10ovh'"
+    [csTweenEnd]="'20ovh'"               
+>
+    2
+</h1>`;
 
   codeSCSS01 = `
-.csTweenOnBegin {
-  transform: scale(2);
-  transition: all .5s ease;
+two.csTweenOnBegin {               
+    transform: rotate(360deg) scale(2);
 }
-.csTweenOnEnd {
-  opacity: 0;
-  transform: scale(0.5); 
-  transition: all 1s ease;   
+two.csTweenOnEnd {
+    transition: all 1s ease;
+    transform: rotate(720deg) scale(0);
+    opacity: 0;
 }`;
 
   codeHTML02 = `<h1 circus-scorll
     [csTweenBegin]="'0ovh'"
     [csTweenEnd]="'30ovh'"
-    [csTweenFrom]="{letterSpacing : '0vw', fontSize : '5vh'}"
-    [csTweenTo]="{letterSpacing : '1.5vw', fontSize : '8vh'}"
+    [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
+    [csTweenTo]="{letterSpacing : '5vw', fontSize : '0vh'}"
     [csTweenEasing]="'easeInOutQuad'"
     [csTweenOnBegin]="anim1OnBegin"
     [csTweenOnEnd]="anim1OnEnd"
