@@ -1,14 +1,49 @@
 @import '../../styles.variables';
-
 header {
     background: #fff;
     color: #000;
     padding: 20px;
     border-bottom: 1px solid $backgroundColor;
+    transition: all 0.5s ease;
+    &.csTweenOnBegin{
+        padding: 10px;        
+    }    
+
+    h3{
+        font-weight: 700;
+    }
+    h4{
+        margin-bottom: 0;
+    }
+    
     .header-col {
-        @media (max-width: 767px) {
-            padding-top: 15px;
+        position: relative;
+        padding: 0;
+        .col-inside {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            vertical-align: middle;
+        }
+        &.right {
+
+            .fork{
+                display: inline-block;  
+                margin-top: 10px;             
+            }          
+            
+            a {
+                display: inline-block;
+                margin: 10px 5px 10px 5px;                
+            }            
+        }
+        @media (max-width: 992px) {
+           &.last-of-type{
+                padding-top: 15px;
+           } 
+           
             text-align: center;
+            display: block;
         }
     }
     h3 {

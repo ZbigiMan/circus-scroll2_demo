@@ -1,17 +1,25 @@
 @import 'styles.variables';
-
 body {
     background-color: $backgroundColor;
     color: #fff;
 }
 
 .screen {
-    width: 100%;
     height: 100vh;
+    .screen-content{
+         height: 100vh;
+    }
+}
+
+.tbl {
     display: table;
-    .screen-content {
+    width: 100%;  
+    height: 100%;  
+    .tbl-cell {
+        
         display: table-cell;
         vertical-align: middle;
+        float: none;        
     }
 }
 
@@ -25,14 +33,12 @@ body {
     font-size: 12px;
 }
 
-.alert{
+.alert {
     margin: 0;
 }
 
 //
-
 //CodeMirror
-
 .CodeMirror {
     height: auto;
 }

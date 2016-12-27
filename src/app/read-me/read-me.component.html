@@ -4,12 +4,19 @@
             <h2 class="section-header">Installation</h2>
         </div>
         <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
-           <h4>Using Git</h4>
+           <h4>Via Git</h4>
         </div>
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
            <label class="label label-info">bash:</label>
            <codemirror [(ngModel)]="codeInstallGit" [config]="cmConfigShell"></codemirror>
-        </div>                
+        </div>
+        <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
+           <h4>Via npm</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
+           <label class="label label-info">bash:</label>
+           <codemirror [(ngModel)]="codeInstallNpm" [config]="cmConfigShell"></codemirror>
+        </div>                     
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
             <h2 class="section-header">How to use</h2>
         </div>        
@@ -17,9 +24,23 @@
            <h4>Import CircusScrollDirective</h4>
         </div>
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
+           <label class="label label-info">app.module.ts: (installed via git)</label>
+           <codemirror [(ngModel)]="codeAppModuleGit" [config]="cmConfigTypeScript"></codemirror>
+        </div>
+        <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
+           <h4>or</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
+           <label class="label label-info">app.module.ts: (installed via npm)</label>
+           <codemirror [(ngModel)]="codeAppModuleNpm" [config]="cmConfigTypeScript"></codemirror>
+        </div>
+        <div class="container block"circus-scorll [csTweenBegin]="'30ovh'">     
+           <h4>Add CircusScrollDirective to @NgModule declarations</h4>
+        </div>
+        <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">   
            <label class="label label-info">app.module.ts:</label>
-           <codemirror [(ngModel)]="codeAppModule" [config]="cmConfigTypeScript"></codemirror>
-        </div>        
+           <codemirror [(ngModel)]="codeAppModuleDeclaration" [config]="cmConfigTypeScript"></codemirror>
+        </div>            
         <div class="container block" circus-scorll [csTweenBegin]="'30ovh'">
             <h4 class="section-header">Example 1:</h4>
         </div>
