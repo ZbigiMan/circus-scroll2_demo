@@ -94,23 +94,23 @@ export class AppComponent {
 
     //..    
 
-  anim1OnBeginCallbackFunction(data) {
-     console.log('function: OnBegin', 'element:', data.el);
+  anim1OnBeginCallbackFunction(el) {
+    // console.log('function: OnBegin', 'element:', el);
   }
 
-  anim1OnEndCallbackFunction(data) {
-     console.log('function: OnEnd', 'element:', data.el);
+  anim1OnEndCallbackFunction(el) {
+    // console.log('function: OnEnd', 'element:', el);
   }
 
-  anim1OnReverseBeginCallbackFunction(data) {
-     console.log('function: OnReverseBegin', 'element:', data.el);
+  anim1OnReverseBeginCallbackFunction(el) {
+    // console.log('function: OnReverseBegin', 'element:', el);
   }
 
-  anim1OnReverseEndCallbackFunction(data) {
-     console.log('function: OnReverseEnd', 'element:', data.el);
+  anim1OnReverseEndCallbackFunction(el) {
+    // console.log('function: OnReverseEnd', 'element:', el);
   }
-  anim1OnProgressCallbackFunction(data) {
-    console.log('function: onProgress', 'element:', data.el, 'progress:', data.progress);
+  anim1OnProgressCallbackFunction(el, p) {
+    // console.log('function: onProgress', 'element:', el, 'progress:', p);
   }
 
   //.. 

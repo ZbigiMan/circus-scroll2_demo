@@ -28,7 +28,7 @@ export class CircusScrollDirective {
     private started = 0;
     private completed = 0;
     private revStarted = 0;
-    private revCompleted = 0;   
+    private revCompleted = 0;
 
     private errors = {
         'error': "Circus Scroll Settings Error.",
@@ -188,17 +188,12 @@ export class CircusScrollDirective {
 
         //Callbacks
 
-        
-
         //OnBegin
 
         if (this.started == 1) {
             this.addClass(that.el.nativeElement, 'csTweenOnBegin');
             if (this.OnBegin !== undefined) {
-                this.OnBegin({
-                  'el' : this.el,
-                  'progress' : p  
-                });
+                this.OnBegin(this.el);
             }
         }
 
@@ -208,10 +203,7 @@ export class CircusScrollDirective {
             p = 1;
             this.addClass(that.el.nativeElement, 'csTweenOnEnd');
             if (this.OnEnd !== undefined) {
-                this.OnEnd({
-                  'el' : this.el,
-                  'progress' : p  
-                });
+                this.OnEnd(this.el);
             }
         }
 
@@ -220,10 +212,7 @@ export class CircusScrollDirective {
         if (this.revStarted == 1) {
             this.removeClass(that.el.nativeElement, 'csTweenOnEnd');
             if (this.OnReverseBegin !== undefined) {
-                this.OnReverseBegin({
-                  'el' : this.el,
-                  'progress' : p  
-                });
+                this.OnReverseBegin(this.el);
             }
             this.revStarted++;
         }
@@ -234,10 +223,7 @@ export class CircusScrollDirective {
             p = 0;
             this.removeClass(that.el.nativeElement, 'csTweenOnBegin');
             if (this.OnReverseEnd !== undefined) {
-                this.OnReverseEnd({
-                  'el' : this.el,
-                  'progress' : p  
-                });
+                this.OnReverseEnd(this.el);
             }
             this.revCompleted++;
         }
@@ -247,10 +233,7 @@ export class CircusScrollDirective {
 
         if (p >= 0 && p <= 1) {
             if (this.onProgress !== undefined) {
-                this.onProgress({
-                  'el' : this.el,
-                  'progress' : p  
-                });
+                this.onProgress(this.el, p);
             }
         }
     }
