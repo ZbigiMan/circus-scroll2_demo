@@ -55,7 +55,7 @@ export class ReadMeComponent implements OnInit {
 
   // Code examples
 
-  codeShellGit = `git clone https://github.com/ZbigiMan/circus-scroll2
+  codeInstallGit = `git clone https://github.com/ZbigiMan/circus-scroll2
 
 cd circus-scroll2
 
@@ -77,14 +77,14 @@ ng serve`;
   //.. 
 })`;
 
-  codeHTML01 = `<h1 class="two" circus-scorll
+  codeExample1HTML = `<h1 class="two" circus-scorll
     [csTweenBegin]="'10ovh'"
     [csTweenEnd]="'20ovh'"               
 >
     2
 </h1>`;
 
-  codeSCSS01 = `
+  codeExample1CSS = `
 .two.csTweenOnBegin {               
     transition: all 1s ease;
     transform: rotate(360deg) scale(2);
@@ -95,7 +95,7 @@ ng serve`;
     opacity: 0;
 }`;
 
-  codeHTML02 = `<h1 circus-scorll
+  codeExample2HTML = `<h1 circus-scorll
     [csTweenBegin]="'0ovh'"
     [csTweenEnd]="'40ovh'"
     [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
@@ -108,7 +108,7 @@ ng serve`;
     [csTweenOnProgress]="anim1OnProgressCallbackFunction"
 >`;
 
-  codeYourComponent = `export class AppComponent {
+  codeExample2Component = `export class AppComponent {
 
     //..    
 
