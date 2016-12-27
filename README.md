@@ -87,7 +87,7 @@ HTML:
 
 #### Callback functions:
 
-app.component.ts:
+your.component.ts:
 
 ```javascript
 export class AppComponent {
