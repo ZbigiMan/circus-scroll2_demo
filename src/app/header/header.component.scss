@@ -1,0 +1,19 @@
+@import '../../styles.variables';
+
+header {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-bottom: 1px solid $backgroundColor;
+    .header-col {
+        @media (max-width: 767px) {
+            padding-top: 15px;
+            text-align: center;
+        }
+    }
+    h3 {
+        font-size: 22px;
+        margin: 0;
+        color: $heraderColor;
+    }
+}

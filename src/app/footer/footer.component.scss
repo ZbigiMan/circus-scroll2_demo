@@ -1,0 +1,12 @@
+@import '../../styles.variables';
+
+footer{
+    background: $footerBackgroundColor;    
+    a{
+        color: $a;
+        &:hover{
+            color: $ahover;
+        }
+    }
+    
+}

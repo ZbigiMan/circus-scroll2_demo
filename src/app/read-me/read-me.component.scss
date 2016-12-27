@@ -1,0 +1,23 @@
+@import '../../styles.variables';
+.reade-me {
+    margin-top: 100vh;
+    padding-bottom: 100px;
+    .block {
+        margin: 20px 0;
+        transition: all 1s ease;
+        opacity: 0;
+        transform: translateX(-25vw);
+        .section-header {
+            margin-top: 100px;
+        }
+        &.csTweenOnBegin {
+            transform: translateX(0vw);
+            opacity: 1;
+        }
+        &.csTweenOnEnd {
+            .CodeMirror {
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

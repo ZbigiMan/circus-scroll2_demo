@@ -6,11 +6,19 @@ import { CodemirrorModule } from 'ng2-codemirror';
 
 import { AppComponent } from './app.component';
 import { CircusScrollDirective } from './shared/circus-scroll.directive';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ReadMeComponent } from './read-me/read-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CircusScrollDirective
+    CircusScrollDirective,
+    HeaderComponent,
+    FooterComponent,
+    WelcomePageComponent,
+    ReadMeComponent
   ],
   imports: [
     BrowserModule,

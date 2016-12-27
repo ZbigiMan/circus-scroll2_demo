@@ -25,7 +25,6 @@ export class CircusScrollDirective {
     private el;
     private beginParsed;
     private endParsed;
-
     private started = 0;
     private completed = 0;
     private revStarted = 0;
