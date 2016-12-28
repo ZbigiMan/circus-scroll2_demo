@@ -41,18 +41,15 @@ export class CircusScrollDirective {
     constructor(elementRef: ElementRef, private renderer: Renderer) {
         this.el = elementRef;
         this.tag = this.el.nativeElement.tagName;
-
-        console.log(this.tag);
-
     }
 
 
 
-    @HostListener('click', ['$event']) private onClick(event: Event) {
-        if(this.tag == 'A'){
-           console.log(this.el.nativeElement.href); 
-        }              
-    }
+    // @HostListener('click', ['$event']) private onClick(event: Event) {
+    //     if(this.tag == 'A'){
+    //        console.log(this.el.nativeElement.href); 
+    //     }              
+    // }
 
 
 
