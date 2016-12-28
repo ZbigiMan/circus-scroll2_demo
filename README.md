@@ -21,7 +21,7 @@ ng serve
 app.module.ts:
 
 ```javascript
-import { CircusScrollDirective } from './shared/circus-scroll.directive';
+import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scroll.directive';
 
   //..
 
