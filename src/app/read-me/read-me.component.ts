@@ -55,9 +55,9 @@ export class ReadMeComponent implements OnInit {
 
   // Code examples
 
-  codeInstallGit = `git clone https://github.com/ZbigiMan/circus-scroll2
+  codeInstallGit = `git clone https://github.com/ZbigiMan/circus-scroll2_demo
 
-cd circus-scroll2
+cd circus-scroll2_demo
 
 npm install
 
@@ -67,10 +67,6 @@ ng serve`;
 npm install circus-scroll2
   `;
   
-  codeAppModuleGit = `
-import { CircusScrollDirective } from './shared/circus-scroll.directive';
-  `
-
   codeAppModuleNpm= `
 import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scroll.directive';
   `

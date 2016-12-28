@@ -1,6 +1,6 @@
 {
-    "name": "circus-scroll2",
-    "version": "1.0.7",
+    "name": "circus-scroll2_demo",
+    "version": "1.0.0",
     "license": "MIT",
     "angular-cli": {},
     "scripts": {
@@ -44,6 +44,7 @@
         "awesome-typescript-loader": "3.0.0-beta.10",
         "codemirror": "^5.21.0",
         "ng2-codemirror" : "^1.0.1",
-        "bootstrap": "^3.3.7"
+        "bootstrap": "^3.3.7",
+        "circus-scroll2" : "^1.0.0"
     }
 }

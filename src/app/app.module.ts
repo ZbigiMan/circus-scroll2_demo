@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { CodemirrorModule } from 'ng2-codemirror';
 
 import { AppComponent } from './app.component';
-import { CircusScrollDirective } from './shared/circus-scroll.directive';
+import { CircusScrollDirective } from '../../node_modules/circus-scroll2/dist/circus-scroll.directive';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';

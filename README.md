@@ -4,9 +4,9 @@ Angular 2 Directive for scroll animations
 ### Instalation
 
 ```
-git clone https://github.com/ZbigiMan/circus-scroll2
+git clone https://github.com/ZbigiMan/circus-scroll2_demo
 
-cd circus-scroll2
+cd circus-scroll2_demo
 
 npm install
 
