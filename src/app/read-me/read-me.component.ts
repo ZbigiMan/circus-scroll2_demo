@@ -87,7 +87,7 @@ import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scr
   //.. 
 })`;
 
-  codeExample1HTML = `<h1 class="two" circus-scorll
+  codeExample1HTML = `<h1 class="two" circus-scroll
     [csTweenBegin]="'10ovh'"
     [csTweenEnd]="'20ovh'"               
 >
@@ -105,7 +105,7 @@ import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scr
     opacity: 0;
 }`;
 
-  codeExample2HTML = `<h1 circus-scorll
+  codeExample2HTML = `<h1 circus-scroll
     [csTweenBegin]="'0ovh'"
     [csTweenEnd]="'40ovh'"
     [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"

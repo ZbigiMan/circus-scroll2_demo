@@ -5,7 +5,7 @@
 import { Directive, ElementRef, HostListener, Input, Renderer } from '@angular/core';
 
 @Directive({
-    selector: '[circus-scorll]'
+    selector: '[circus-scroll]'
 })
 
 export class CircusScrollDirective {
@@ -23,6 +23,7 @@ export class CircusScrollDirective {
 
 
     private el;
+    private tag;
     private beginParsed;
     private endParsed;
     private started = 0;
@@ -39,201 +40,217 @@ export class CircusScrollDirective {
 
     constructor(elementRef: ElementRef, private renderer: Renderer) {
         this.el = elementRef;
+        this.tag = this.el.nativeElement.tagName;
+
+        console.log(this.tag);
 
     }
 
+
+
+    @HostListener('click', ['$event']) private onClick(event: Event) {
+        if(this.tag == 'A'){
+           console.log(this.el.nativeElement.href); 
+        }              
+    }
+
+
+
     @HostListener("window:scroll", []) private onscroll(el) {
-        
-        if (this.end === undefined){
-            this.end = this.begin;
-        }
 
-        //Parse 'begin' and end 'values'   
+        if (this.begin !== undefined) {
 
-        let vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
-            beginVal = parseInt(this.begin),
-            endVal = parseInt(this.end),
-            beginUnit = this.begin.toString().split(beginVal).join(''),
-            endUnit = this.end.toString().split(endVal).join('');
-
-        if (beginUnit !== endUnit) {
-            console.error(this.errors.error);
-            console.error(this.errors.beginEndDontMatch);
-            console.error(this.el);
-            return;
-        }
-
-        if (beginUnit == 'vh' && endUnit == 'vh') {
-            this.beginParsed = (beginVal / 100) * vh;
-            this.endParsed = (endVal / 100) * vh;
-        } else if (beginUnit == 'ovh' && endUnit == 'ovh'){
-            if(this.el.nativeElement.offsetTop > vh){
-                this.beginParsed = ((beginVal / 100) * vh) + this.el.nativeElement.offsetTop - vh; 
-                this.endParsed = ((endVal / 100) * vh) + this.el.nativeElement.offsetTop - vh;
-            }else{
-                this.beginParsed = (beginVal / 100) * vh;
-                this.endParsed = (endVal / 100) * vh;
-            }           
-
-        } else {
-            this.beginParsed = beginVal;
-            this.endParsed = endVal;
-        }
-        
-
-        let scrollTop = window.scrollY,
-            p = (scrollTop - this.beginParsed) / (this.endParsed - this.beginParsed); //progress        
-
-        if (p < 1) {
-            if (this.completed > 0) {
-                this.revStarted++;
+            if (this.end === undefined) {
+                this.end = this.begin;
             }
-            this.completed = 0;
-        }
 
-        if (p >= 1) {
-            this.completed++;
-            this.revStarted = 0;
-        }
+            //Parse 'begin' and end 'values'   
 
-        if (p <= 0) {
-            if (this.started > 0) {
-                this.revCompleted++;
-            }
-            this.started = 0;
-        }
+            let vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
+                beginVal = parseInt(this.begin),
+                endVal = parseInt(this.end),
+                beginUnit = this.begin.toString().split(beginVal).join(''),
+                endUnit = this.end.toString().split(endVal).join('');
 
-        if (p > 0) {
-            this.started++;
-            this.revCompleted = 0;
-        }
-        
-        let that = this;
-
-        //Tween function     
-
-        if (this.to !== undefined && this.from !== undefined) {
-
-            //Checking 'from' and 'to' objects length 
-
-            if (Object.keys(this.from).length != Object.keys(this.to).length) {
+            if (beginUnit !== endUnit) {
                 console.error(this.errors.error);
-                console.error(this.errors.formToDontMatch);
+                console.error(this.errors.beginEndDontMatch);
                 console.error(this.el);
                 return;
             }
 
-            //            
+            if (beginUnit == 'vh' && endUnit == 'vh') {
+                this.beginParsed = (beginVal / 100) * vh;
+                this.endParsed = (endVal / 100) * vh;
+            } else if (beginUnit == 'ovh' && endUnit == 'ovh') {
+                if (this.el.nativeElement.offsetTop > vh) {
+                    this.beginParsed = ((beginVal / 100) * vh) + this.el.nativeElement.offsetTop - vh;
+                    this.endParsed = ((endVal / 100) * vh) + this.el.nativeElement.offsetTop - vh;
+                } else {
+                    this.beginParsed = (beginVal / 100) * vh;
+                    this.endParsed = (endVal / 100) * vh;
+                }
 
-            Object.keys(this.to).forEach(function (prop, i) {
+            } else {
+                this.beginParsed = beginVal;
+                this.endParsed = endVal;
+            }
 
-                //Checking if 'from' and 'to' property match
 
-                if (prop != Object.keys(that.from)[i]) {
+            let scrollTop = window.scrollY,
+                p = (scrollTop - this.beginParsed) / (this.endParsed - this.beginParsed); //progress        
+
+            if (p < 1) {
+                if (this.completed > 0) {
+                    this.revStarted++;
+                }
+                this.completed = 0;
+            }
+
+            if (p >= 1) {
+                this.completed++;
+                this.revStarted = 0;
+            }
+
+            if (p <= 0) {
+                if (this.started > 0) {
+                    this.revCompleted++;
+                }
+                this.started = 0;
+            }
+
+            if (p > 0) {
+                this.started++;
+                this.revCompleted = 0;
+            }
+
+            let that = this;
+
+            //Tween function     
+
+            if (this.to !== undefined && this.from !== undefined) {
+
+                //Checking 'from' and 'to' objects length 
+
+                if (Object.keys(this.from).length != Object.keys(this.to).length) {
                     console.error(this.errors.error);
                     console.error(this.errors.formToDontMatch);
                     console.error(this.el);
                     return;
                 }
 
-                //Easing function parameters
+                //            
 
-                let value = that.to[prop];
+                Object.keys(this.to).forEach(function (prop, i) {
 
-                let e = that.parseValue(value), //End
-                    b = that.parseValue(that.from[prop]), //Begin;
-                    c = e - b, //Change
-                    d = that.endParsed - that.beginParsed, //Duration
-                    t = p * d, //Time,
-                    unit = false; //px for example
+                    //Checking if 'from' and 'to' property match
 
-                if (that.completed == 1) {
-                    t = d;
-                }
-
-                if (that.revCompleted == 1) {
-                    t = 0;
-                }
-
-                if (e != value) {
-                    unit = value.split(e).join('');
-                } else {
-                    unit = false;
-                }
-
-                if (t >= 0 && t <= d) {
-
-                    //Checking 'easing'       
-
-                    if (that.Easing[that.easing] === undefined) {
-                        that.easing = 'easeOutQuad';
+                    if (prop != Object.keys(that.from)[i]) {
+                        console.error(this.errors.error);
+                        console.error(this.errors.formToDontMatch);
+                        console.error(this.el);
+                        return;
                     }
 
-                    //                    
+                    //Easing function parameters
 
-                    let newIntVal = that.Easing[that.easing](null, t, b, c, d),
-                        newVal;
+                    let value = that.to[prop];
 
-                    if (unit !== false) {
-                        newVal = newIntVal + unit;
+                    let e = that.parseValue(value), //End
+                        b = that.parseValue(that.from[prop]), //Begin;
+                        c = e - b, //Change
+                        d = that.endParsed - that.beginParsed, //Duration
+                        t = p * d, //Time,
+                        unit = false; //px for example
+
+                    if (that.completed == 1) {
+                        t = d;
+                    }
+
+                    if (that.revCompleted == 1) {
+                        t = 0;
+                    }
+
+                    if (e != value) {
+                        unit = value.split(e).join('');
                     } else {
-                        newVal = newIntVal;
+                        unit = false;
                     }
 
-                    that.el.nativeElement.style[prop] = newVal;
+                    if (t >= 0 && t <= d) {
 
+                        //Checking 'easing'       
+
+                        if (that.Easing[that.easing] === undefined) {
+                            that.easing = 'easeOutQuad';
+                        }
+
+                        //                    
+
+                        let newIntVal = that.Easing[that.easing](null, t, b, c, d),
+                            newVal;
+
+                        if (unit !== false) {
+                            newVal = newIntVal + unit;
+                        } else {
+                            newVal = newIntVal;
+                        }
+
+                        that.el.nativeElement.style[prop] = newVal;
+
+                    }
+                });
+            }
+
+            //Callbacks
+
+            //OnBegin
+
+            if (this.started == 1) {
+                this.addClass(that.el.nativeElement, 'csTweenOnBegin');
+                if (this.OnBegin !== undefined) {
+                    this.OnBegin(this.el);
                 }
-            });
-        }
-
-        //Callbacks
-
-        //OnBegin
-
-        if (this.started == 1) {
-            this.addClass(that.el.nativeElement, 'csTweenOnBegin');
-            if (this.OnBegin !== undefined) {
-                this.OnBegin(this.el);
             }
-        }
 
-        //OnEnd
+            //OnEnd
 
-        if (this.completed == 1) {
-            p = 1;
-            this.addClass(that.el.nativeElement, 'csTweenOnEnd');
-            if (this.OnEnd !== undefined) {
-                this.OnEnd(this.el);
+            if (this.completed == 1) {
+                p = 1;
+                this.addClass(that.el.nativeElement, 'csTweenOnEnd');
+                if (this.OnEnd !== undefined) {
+                    this.OnEnd(this.el);
+                }
             }
-        }
 
-        //OnReverseBegin
+            //OnReverseBegin
 
-        if (this.revStarted == 1) {
-            this.removeClass(that.el.nativeElement, 'csTweenOnEnd');
-            if (this.OnReverseBegin !== undefined) {
-                this.OnReverseBegin(this.el);
+            if (this.revStarted == 1) {
+                this.removeClass(that.el.nativeElement, 'csTweenOnEnd');
+                if (this.OnReverseBegin !== undefined) {
+                    this.OnReverseBegin(this.el);
+                }
+                this.revStarted++;
             }
-            this.revStarted++;
-        }
 
-        //onReverseEnd
+            //onReverseEnd
 
-        if (this.revCompleted == 1) {
-            p = 0;
-            this.removeClass(that.el.nativeElement, 'csTweenOnBegin');
-            if (this.OnReverseEnd !== undefined) {
-                this.OnReverseEnd(this.el);
+            if (this.revCompleted == 1) {
+                p = 0;
+                this.removeClass(that.el.nativeElement, 'csTweenOnBegin');
+                if (this.OnReverseEnd !== undefined) {
+                    this.OnReverseEnd(this.el);
+                }
+                this.revCompleted++;
             }
-            this.revCompleted++;
-        }
 
 
-        //onProgress
+            //onProgress
 
-        if (p >= 0 && p <= 1) {
-            if (this.onProgress !== undefined) {
-                this.onProgress(this.el, p);
+            if (p >= 0 && p <= 1) {
+                if (this.onProgress !== undefined) {
+                    this.onProgress(this.el, p);
+                }
             }
         }
     }

@@ -41,7 +41,7 @@ import { CircusScrollDirective } from './shared/circus-scroll.directive';
 HTML:
 
 ```html
-<h1 class="two" circus-scorll
+<h1 class="two" circus-scroll
     [csTweenBegin]="'10ovh'"
     [csTweenEnd]="'20ovh'"               
 >
@@ -69,7 +69,7 @@ CSS:
 HTML:
 
 ```html
-<h1 circus-scorll
+<h1 circus-scroll
     [csTweenBegin]="'0ovh'"
     [csTweenEnd]="'40ovh'"
     [csTweenFrom]="{letterSpacing : '0vw', fontSize : '10vh'}"
