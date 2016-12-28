@@ -20,6 +20,7 @@
             "../node_modules/bootstrap/dist/css/bootstrap.css",
             "../node_modules/codemirror/lib/codemirror.css",
             "../node_modules/codemirror/theme/elegant.css",
+            "styles.variables.scss",
             "styles.scss"
         ],
         "scripts": [

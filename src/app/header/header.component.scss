@@ -7,17 +7,19 @@ header {
     transition: all 0.5s ease;
     padding: 15px 10px;
     &.csTweenOnBegin{
-        padding: 10px 10px;        
+        padding: 7px 10px;        
     }    
 
     h3{
         font-weight: 700;
-        display: inline-block;
-        margin-bottom: 0;
+        display: inline-block;  
+        margin-bottom: 7px;
     }
-    h4{       
-        display: inline-block;
+    h4{
         margin-bottom: 0;
+        display: inline-block;  
+        margin-left: 10px;
+        margin-bottom: 7px;
     }
     
     .header-col {
@@ -33,18 +35,13 @@ header {
 
             .fork{
                 display: inline-block;  
-                margin-top: 10px; 
-                vertical-align: middle;            
-            } 
-
-            .links{
+                margin-top: 10px;             
+            }          
+            
+            a {
                 display: inline-block;
-                vertical-align: middle;
-                a {
-                    display: inline-block;
-                    margin: 10px 5px 0px 5px;                
-                }      
-            }                  
+                margin: 0px 5px 0px 5px;                
+            }            
         }
         @media (max-width: 992px) {
            &.last-of-type{
