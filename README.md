@@ -21,7 +21,7 @@ ng serve
 app.module.ts:
 
 ```javascript
-import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scroll.directive';
+import { CircusScrollDirective } from 'your_path_to/node_modules/circus-scroll2/dist/circus-scroll.directive';
 
   //..
 
@@ -36,7 +36,8 @@ import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scr
 })
 ```
 
-#### Example 1
+### Example 1.
+#### CSS animation using triggered classes.
 
 HTML:
 
@@ -64,7 +65,8 @@ CSS:
 }
 ```
 
-#### Example 2
+### Example 2.
+#### Animation fully synchronized with scroll and callbacks.
 
 HTML:
 
@@ -87,7 +89,7 @@ HTML:
 
 #### Callback functions:
 
-your.component.ts:
+app.component.ts:
 
 ```javascript
 export class AppComponent {
@@ -95,19 +97,19 @@ export class AppComponent {
     //..    
 
   anim1OnBeginCallbackFunction(data) {
-    console.log('function: OnBegin', 'element:', data.el);
+     console.log('function: OnBegin', 'element:', data.el);
   }
 
   anim1OnEndCallbackFunction(data) {
-    console.log('function: OnEnd', 'element:', data.el);
+     console.log('function: OnEnd', 'element:', data.el);
   }
 
   anim1OnReverseBeginCallbackFunction(data) {
-    console.log('function: OnReverseBegin', 'element:', data.el);
+     console.log('function: OnReverseBegin', 'element:', data.el);
   }
 
   anim1OnReverseEndCallbackFunction(data) {
-    console.log('function: OnReverseEnd', 'element:', data.el);
+     console.log('function: OnReverseEnd', 'element:', data.el);
   }
   anim1OnProgressCallbackFunction(data) {
     console.log('function: onProgress', 'element:', data.el, 'progress:', data.progress);
@@ -118,7 +120,71 @@ export class AppComponent {
 }
 ```
 
+### Example 3.
+#### Smooth scroll to anchor.
+
+#### Minimal configuration:
+
+HTML:
+
+```html
+
+<a href="#example3" class="nav-link" circus-scroll>Example 3</a>
+
+```
+>#### Defaults:
+>duration: 1000,
+>easing: easeOutQuad
+
+#### Extended configuration:
+
+HTML:
+
+```html
+<a href="#example3" class="nav-link" circus-scroll
+  [csTweenDuration] = "1500"
+  [csTweenEasing] = "easeInOutQuad"
+>
+  Example 3
+</a>
+```
+
+### Easing types:
+
+* linear
+* swing
+* easeInQuad
+* easeOutQuad
+* easeInOutQuad
+* easeInCubic
+* easeOutCubic
+* easeInOutCubic
+* easeInQuart
+* easeInOutQuart
+* easeInQuint
+* easeOutQuint
+* easeInOutQuint
+* easeInSine
+* easeOutSine
+* easeInOutSine
+* easeInExpo
+* easeOutExpo
+* easeInOutExpo
+* easeInCirc
+* easeOutCirc
+* easeInOutCirc
+* easeInElastic
+* easeOutElastic
+* easeInOutElastic
+* easeInBack
+* easeOutBack
+* easeInOutBack
+* easeInBounce
+* easeOutBounce
+* easeInOutBounce
+
 #### More documentation and examples soon.
 ### See demo: [www.zbigiman.com/circus-scroll2](http://www.zbigiman.com/circus-scroll2 "Circus Scroll 2")
+### See demo source: [https://github.com/ZbigiMan/circus-scroll2_demo](https://github.com/ZbigiMan/circus-scroll2_demo "circus-scroll2_demo")
 
 

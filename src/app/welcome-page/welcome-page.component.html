@@ -1,4 +1,4 @@
-<div class="welcomePage text-center">    
+<div class="welcomePage text-xs-center">    
     <h1 circus-scroll
         [csTweenBegin]="'0ovh'"
         [csTweenEnd]="'40ovh'"
@@ -35,10 +35,11 @@
         <span class="dot" circus-scroll [csTweenBegin]="'5ovh'">.</span>                
         <span class="dot" circus-scroll [csTweenBegin]="'10ovh'">.</span>                 
         <span class="dot" circus-scroll [csTweenBegin]="'15ovh'">.</span>                                    
-        <span class="glyphicon glyphicon-menu-down arrowhead" 
-            circus-scroll
-            [csTweenBegin]="'20ovh'"
-            [csTweenEnd]="'25ovh'"               
-        ></span>   
+        <a href="#installation" circus-scroll [csTweenDuration] = "1500">
+            <i class="fa fa-chevron-down arrowhead" aria-hidden="true" circus-scroll
+                [csTweenBegin]="'20ovh'"
+                [csTweenEnd]="'25ovh'"               
+            ></i>
+        </a>   
     </div>
 </div>

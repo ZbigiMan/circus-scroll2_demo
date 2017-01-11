@@ -20,11 +20,14 @@
             "../node_modules/bootstrap/dist/css/bootstrap.css",
             "../node_modules/codemirror/lib/codemirror.css",
             "../node_modules/codemirror/theme/elegant.css",
+            "../node_modules/font-awesome/css/font-awesome.min.css",
             "styles.variables.scss",
             "styles.scss"
         ],
         "scripts": [
-                      
+             "../node_modules/jquery/dist/jquery.min.js",
+             "../node_modules/tether/dist/js/tether.min.js",
+             "../node_modules/bootstrap/dist/js/bootstrap.min.js"       
         ],
         "environments": {
             "source": "environments/environment.ts",

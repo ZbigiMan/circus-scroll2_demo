@@ -1,20 +1,66 @@
+<a class="anchor" id="welcome">welcome</a>
 <header class="container-fluid navbar-fixed-top" circus-scroll [csTweenBegin]="'1ovh'">
-    <div class="container">
+    <div class="container top">
         <div class="tbl">
-            <div class="col-lg-6 col-md-6 col-sm-12 header-col text-left tbl-cell">
-                <h3>Circus Scroll 2</h3>
+            <div class="col-lg-7 col-md-12 header-col text-xl-left text-lg-left text-md-center text-sm-center text-xs-left tbl-cell">
+                <a href="#welcome" class="logotype" circus-scroll [csTweenDuration] = "1500">
+                    <h3>Circus Scroll 2</h3>
+                </a>
                 <h4>Angular 2 Directive for scroll animations</h4>
-                
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 header-col right text-right tbl-cell">
-                <strong class="fork">Fork me on:</strong>                
-                <a href="//github.com/ZbigiMan/circus-scroll2_demo" class="btn btn-primary">
-                    GitHub <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-                <a href="//www.npmjs.com/package/circus-scroll2" class="btn btn-danger">
-                    npm <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+            <div class="col-lg-5 col-md-12 header-col right text-xl-right text-lg-right text-md-center text-sm-center text-xs-left tbl-cell">
+                <div class="hidden-xs-down fork-section">
+                    <a href="//github.com/ZbigiMan/circus-scroll2_demo" class="btn btn-primary">
+                        GitHub&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="//www.npmjs.com/package/circus-scroll2" class="btn btn-danger">
+                        npm&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-dark bg-inverse" id="scrollspy-nav">
+        <div class="container">
+            
+                <div class="hidden-sm-up fork-section fork-mobile float-xs-left">
+                    <a href="//github.com/ZbigiMan/circus-scroll2_demo" class="btn btn-primary">
+                        GitHub&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="//www.npmjs.com/package/circus-scroll2" class="btn btn-danger">
+                        npm&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <button class="navbar-toggler hidden-sm-up float-xs-right collapsed" type="button" data-toggle="collapse" data-target="#nav-content" id="nav-toggle">
+                    <span></span>
+                </button>             
+            
+            <div class="collapse navbar-toggleable-xs col-xs-12 nopadding" id="nav-content">
+                <hr class="hidden-sm-up" />
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="#welcome" class="nav-link" circus-scroll [csTweenDuration] = "1500">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#installation" class="nav-link" circus-scroll [csTweenDuration] = "1500">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#how-to-use" class="nav-link" circus-scroll [csTweenDuration] = "1500">How to use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#example1" class="nav-link" circus-scroll [csTweenDuration] = "1500">Example 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#example2" class="nav-link" circus-scroll [csTweenDuration] = "1500">Example 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#example3" class="nav-link" circus-scroll [csTweenDuration] = "1500">Example 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#easing" class="nav-link" circus-scroll [csTweenDuration] = "1500">Easing types</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>

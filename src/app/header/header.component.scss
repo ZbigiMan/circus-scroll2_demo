@@ -3,25 +3,123 @@ header {
     background: #fff;
     color: #000;
     padding: 20px;
-    border-bottom: 1px solid $backgroundColor;
-    transition: all 0.5s ease;
-    padding: 15px 10px;
-    &.csTweenOnBegin{
-        padding: 7px 10px;        
-    }    
+    border-bottom: 1px solid $colorGray;
+    padding: 0;
 
-    h3{
-        font-weight: 700;
-        display: inline-block;  
-        margin-bottom: 7px;
+     .btn {
+         min-height: 36px;
+     }   
+
+    a.logotype {
+        color: #000;
     }
-    h4{
+    &.csTweenOnBegin {
+        .top {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .navbar {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+    .top {
+        padding: 15px;
+        transition: all 0.5s ease;
+    }
+    .navbar {
+        border-radius: 0;
         margin-bottom: 0;
-        display: inline-block;  
-        margin-left: 10px;
+        min-height: 25px;
+        padding: 15px;
+        transition: all 0.5s ease;
+        &.bg-inverse {
+            background: $backgroundDark !important;
+        }
+
+        #nav-toggle{
+            border: 1px solid $colorGray;
+            width:auto;
+            height: auto;
+            padding: 4px 8px;
+            background-image: none;
+            min-height: 36px;
+        }
+        
+        
+        #nav-toggle span,
+        #nav-toggle span:before,
+        #nav-toggle span:after {
+            cursor: pointer;
+            border-radius: 1px;
+            height: 2px;
+            width: 28px;
+            background: white;
+            position: relative;
+            display: block;
+            content: '';
+           
+        }
+        #nav-toggle span:before {
+            top: -6px;
+        }
+        #nav-toggle span:after {
+            bottom: -4px;
+        }
+        #nav-toggle span,
+        #nav-toggle span:before,
+        #nav-toggle span:after {
+            transition: all 500ms ease-in-out;
+        }
+        #nav-toggle:not(.collapsed) span {
+            background-color: transparent;
+        }
+        #nav-toggle:not(.collapsed) span:before{
+            top: 0px;
+        }
+        #nav-toggle:not(.collapsed) span:after {
+            top: -2px;
+        }
+        #nav-toggle:not(.collapsed) span:before {
+            transform: rotate(45deg);
+        }
+        #nav-toggle:not(.collapsed) span:after {
+            transform: rotate(-45deg);
+        }
+        .nav-link {
+            padding: 0px 5px;
+            @media(max-width: $xs) {
+                padding: 8px 5px;
+            }
+        }
+        .fork-mobile {
+            float: left;
+            a {
+                min-width: 90px;
+            }
+        }
+        hr {
+            border-color: $colorGray;
+        }
+    }
+    h3 {
+        display: inline-block;
+        margin: 0px 10px 0px 0px;
+        padding: 0;
+        font-weight: 700;
+    }
+    h4 {
+        margin-bottom: 0;
+        display: inline-block;
         margin-bottom: 7px;
     }
-    
+    .fork-section {
+        a {
+            display: inline-block;
+            margin: 0px 3px 0px 3px;
+            min-width: 120px;
+        }
+    }
     .header-col {
         position: relative;
         padding: 0;
@@ -31,30 +129,11 @@ header {
             transform: translateY(-50%);
             vertical-align: middle;
         }
-        &.right {
-
-            .fork{
-                display: inline-block;  
-                margin-top: 10px;             
-            }          
-            
-            a {
-                display: inline-block;
-                margin: 0px 5px 0px 5px;                
-            }            
-        }
         @media (max-width: 992px) {
-           &.last-of-type{
+            &.last-of-type {
                 padding-top: 15px;
-           } 
-           
-            text-align: center;
+            }
             display: block;
         }
-    }
-    h3 {
-        font-size: 22px;
-        margin: 0;
-        color: $heraderColor;
     }
 }

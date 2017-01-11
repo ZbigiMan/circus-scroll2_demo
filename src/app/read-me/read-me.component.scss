@@ -2,6 +2,7 @@
 .reade-me {
     margin-top: 100vh;
     padding-bottom: 100px;
+    margin-bottom: 25vh;
     .block {
         margin: 20px 0;
         transition: all 1s ease;
@@ -9,6 +10,14 @@
         transform: translateX(-25vw);
         .section-header {
             margin-top: 100px;
+            .fa{
+                font-size: 0.5rem;
+                margin-left: 15px;                
+                vertical-align: middle;
+                @media(max-width: $xs){
+                    margin-left: 0px;
+                }
+            }
         }
         &.csTweenOnBegin {
             transform: translateX(0vw);
@@ -18,6 +27,13 @@
             .CodeMirror {
                 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             }
+        }
+    }
+    .list{        
+        column-count: 3;
+        list-style: none;
+        @media(max-width: $xs){
+            column-count: 1;
         }
     }
 }

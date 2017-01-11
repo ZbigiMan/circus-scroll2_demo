@@ -112,7 +112,9 @@ import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scr
     [csTweenOnReverseBegin]="anim1OnReverseBeginCallbackFunction"
     [csTweenOnReverseEnd]="anim1OnReverseEndCallbackFunction"
     [csTweenOnProgress]="anim1OnProgressCallbackFunction"
->`;
+>
+  Circus Scroll
+</h1>`;
 
   codeExample2Component = `export class AppComponent {
 
@@ -141,6 +143,19 @@ import { CircusScrollDirective } from 'your_path_to/node_modules/dist/circus-scr
   //.. 
 
 }`;
+
+codeExample3Component = `
+<a href="#example3" class="nav-link" circus-scroll>Example 3</a>
+`;
+
+codeExample3Component1 = `
+<a href="#example3" class="nav-link" circus-scroll
+  [csTweenDuration] = "1500"
+  [csTweenEasing] = "easeInOutQuad"
+>
+  Example 3
+</a>
+`;
 
   //
 
