@@ -6,6 +6,13 @@ footer{
     h6{
         line-height: 1.5em;
         font-weight: 300;
-    }   
+    }
+    a{
+        color: $colorGray;
+        transition: all 0.5s ease;
+        &:hover{
+            color: $ahover;
+        }
+    }
     
 }

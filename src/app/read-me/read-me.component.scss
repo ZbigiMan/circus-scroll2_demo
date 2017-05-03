@@ -2,7 +2,6 @@
 .reade-me {
     margin-top: 100vh;
     padding-bottom: 100px;
-    margin-bottom: 25vh;
     .block {
         margin: 20px 0;
         transition: all 1s ease;
@@ -27,13 +26,6 @@
             .CodeMirror {
                 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             }
-        }
-    }
-    .list{        
-        column-count: 3;
-        list-style: none;
-        @media(max-width: $xs){
-            column-count: 1;
         }
     }
 }

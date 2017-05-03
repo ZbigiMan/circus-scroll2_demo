@@ -24,14 +24,6 @@ body {
 }
 
 //bootstrap/global
-a {
-    color: $colorGray;
-    transition: all 0.5s ease;
-    &:hover {
-        color: $ahover;
-    }
-}
-
 .nopadding {
     padding: 0 !important;
     margin: 0 !important;
@@ -66,15 +58,14 @@ a {
     font-weight: 400;
 }
 
-.btn,
-.navbar-toggler {
+.btn,.navbar-toggler{
     padding: 0.4rem 1rem;
-    height: auto;
+    height: auto;    
     font-weight: 700;
 }
 
-h4 {
-    @media(max-width: $xs) {
+h4{
+    @media(max-width: $xs){
         font-size: 1.2rem;
     }
 }
